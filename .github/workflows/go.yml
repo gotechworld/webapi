@@ -35,13 +35,13 @@ jobs:
       - name: Build, Tag & Publish Image to DockerHub
         uses: dinushchathurya/build-tag-push-action@v1.0.4
         with:
-          registry_url: 'docker.io'
+          entryPoint: 'docker.io'
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           context: .
           file: Dockerfile
           repoOwner: ${{ secrets.DOCKER_USERNAME }}
-          repository_name: webserver
+          repository: webserver
           tag: v3.0  
     
      
