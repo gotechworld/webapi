@@ -35,7 +35,6 @@ jobs:
       - name: Build, Tag & Publish Image to DockerHub
         uses: dinushchathurya/build-tag-push-action@v1.0.4
         with:
-          entryPoint: 'docker.io'
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           context: .
